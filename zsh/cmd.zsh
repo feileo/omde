@@ -28,6 +28,7 @@ alias gco="git commit -m"
 alias gm="git merge"
 alias gcl='git clone'
 
+# git open
 alias gop='git-open'
 
 # virtualenvwrapper
@@ -42,10 +43,8 @@ alias tnew='tmux new -s'
 alias tatt='tmux attach'
 alias tdtt='tmux detach'
 
-# base
+# file system
 alias cls='clear'
-alias ll='ls -l'
-alias la='ls -a'
 alias grep="grep --color=auto"
 alias cd..="cd .."
 alias cd...="cd ../.."
@@ -65,14 +64,14 @@ alias -s gz='tar -xzvf'
 alias -s tgz='tar -xzvf'
 alias -s zip='unzip'
 alias -s bz2='tar -xjvf'
-
-if [ -x "$(command -v exa)" ]; then
-    alias ls="exa --icons"
-    alias la="exa --icons --all"
-    alias ll="exa --icons --long --links --all --header --group --modified --time-style=iso" # --grid
-    alias lt="exa --icons --long --links --all --header --group --tree --level=2 --modified --time-style=iso"
+alias la='ls -a'
+alias ll='ls -l'
+if [ -x "$(command -v eza)" ]; then
+    alias ls="eza --icons"
+    alias la="eza --icons --all"
+    alias ll="eza --icons --all --long --header --group --modified --time-style=iso" # --grid
+    alias lt="eza --icons --all --long --header --group --tree --level=2 --modified --time-style=iso"
 fi
-
 
 # go q
 qq() {
