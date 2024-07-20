@@ -1,0 +1,13 @@
+# .gitignore_global
+
+.DS_Store
+.ropeproject/
+.vscode/
+egglist.txt
+*.project
+*.settings/
+*.*path
+*pylint
+.test.*
+.
+pyproject.toml
