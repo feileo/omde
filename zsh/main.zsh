@@ -12,44 +12,37 @@ if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]
   source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"
 fi
 
-# if type brew &>/dev/null; then
-#   FPATH=$(brew --prefix)/share/zsh-completions:$FPATH
-
-#   autoload -Uz compinit
-#   compinit
-# fi
-
-
-############################### Main settings ###############################
-
 export ZSH=$HOME/.oh-my-zsh
+export MDE=$HOME/x/omde
 
 # See https://github.com/robbyrussell/oh-my-zsh/wiki/Themes
 ZSH_THEME="powerlevel10k/powerlevel10k"
-# To customize prompt, run `p10k configure` or edit ~/.p10k.zsh(./theme.zsh)
-source ~/x/conf/zsh/theme.zsh
 
-# autojump
+# To customize prompt, run `p10k configure` or edit ~/.p10k.zsh(./theme.zsh)
+source $MDE/zsh/p10k.zsh
+
 plugins=(
-  git z dircycle  extract zsh-syntax-highlighting zsh-autosuggestions
+  git
+  z
+  dircycle
+  extract
+  zsh-syntax-highlighting
+  zsh-autosuggestions
+  # autojump
 )
 
-
-############################### Completion settings ###############################
 ZSH_COMPDUMP="$ZSH_CACHE_DIR/.zcompdump"
+ZSH_DISABLE_COMPFIX=true
 COMPLETION_WAITING_DOTS=true
 COMPLETION_WAITING_DOTS="%F{yellow}waiting...%f"
-ZSH_DISABLE_COMPFIX=true
 CASE_SENSITIVE=true
 HYPHEN_INSENSITIVE=true
 
 
-############################### Update settings ###############################
 zstyle ':omz:update' mode reminder
 zstyle ':omz:update' frequency 7
 
 
-############################### Library settings ###############################
 # DISABLE_MAGIC_FUNCTIONS=true
 # DISABLE_LS_COLORS=true
 DISABLE_UNTRACKED_FILES_DIRTY=true
@@ -59,8 +52,9 @@ HIST_STAMPS="yyyy-mm-dd"
 source $ZSH/oh-my-zsh.sh
 
 ############################### User settings ###############################
-# Load local settings files
-source ~/x/conf/zsh/local.zsh
+setopt HIST_IGNORE_DUPS
 
-# Load local env files
-source ~/x/conf/zsh/local_env.zsh
+DEFAULT_USER=$USER
+
+source $MDE/zsh/cmd.zsh
+source $MDE/zsh/local.zsh
