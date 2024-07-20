@@ -54,6 +54,7 @@ source $ZSH/oh-my-zsh.sh
 ############################### User settings ###############################
 setopt HIST_IGNORE_DUPS
 
+# install tmux-256color https://gist.github.com/bbqtd/a4ac060d6f6b9ea6fe3aabe735aa9d95
 if [[ $TMUX != "" ]] then
   export TERM="tmux-256color"
 else
