@@ -1,6 +1,3 @@
 [submodule "tmux"]
 	path = tmux
 	url = https://github.com/feileo/tmux.git
-[submodule "NvChad"]
-	path = NvChad
-	url = https://github.com/feileo/NvChad.git
