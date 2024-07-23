@@ -1,0 +1,25 @@
+[core]
+  pager = delta
+  editor = nvim
+  excludesfile = ~/.gitignore_global
+
+[interactive]
+  diffFilter = delta --color-only
+
+[delta]
+  navigate = true
+  light = false
+  side-by-side = false
+  line-numbers = true
+
+[merge]
+  conflictstyle = diff3
+
+[diff]
+  colorMoved = default
+
+[filter "lfs"]
+  clean = git-lfs clean -- %f
+  smudge = git-lfs smudge -- %f
+  process = git-lfs filter-process
+  required = true
