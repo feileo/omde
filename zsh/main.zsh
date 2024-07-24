@@ -18,9 +18,6 @@ export MDE=$HOME/x/omde
 # See https://github.com/robbyrussell/oh-my-zsh/wiki/Themes
 ZSH_THEME="powerlevel10k/powerlevel10k"
 
-# To customize prompt, run `p10k configure` or edit ~/.p10k.zsh(./theme.zsh)
-source $MDE/zsh/p10k.zsh
-
 plugins=(
   git
   z
@@ -63,5 +60,9 @@ fi
 
 DEFAULT_USER=$USER
 
-source $MDE/zsh/cmd.zsh
-source $MDE/zsh/local.zsh
+# To customize prompt, run `p10k configure` or edit $MDE/zsh/p10k.zsh.
+[[ ! -f $MDE/zsh/p10k.zsh ]] || source $MDE/zsh/p10k.zsh
+
+[[ ! -f $MDE/zsh/cmd.zsh ]] || source $MDE/zsh/cmd.zsh
+
+[[ ! -f $MDE/zsh/local.zsh ]] || source $MDE/zsh/local.zsh
