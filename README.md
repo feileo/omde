@@ -1,1 +1,3 @@
-# OMDE(Oh My Development Environment)
+# OMDE
+
+Oh My Development Environment
