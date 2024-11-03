@@ -80,5 +80,14 @@ ln -sv $MDE/tmux $HOME/.config/tmux
 # Install neovim to $HOM/apps/nvim/
 # https://github.com/neovim/neovim/blob/master/INSTALL.md
 
+# Install Nerd Font
+# https://www.nerdfonts.com/font-downloads
+
+# Install ripgrep
+# https://github.com/BurntSushi/ripgrep
+brew install ripgrep
+
 ln -sv $MDE/nvim-starter $HOME/.config/nvim
+ope
+# Run :MasonInstallAll command after lazy.nvim finishes downloading plugins.
 ```
