@@ -17,7 +17,7 @@ git clone --recurse-submodules https://github.com/feileo/omde.git $HOME/x/omde
 /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
 ```
 
-### ZSH
+### zsh
 
 ```sh
 brew update
@@ -45,7 +45,7 @@ brew install eza
 source $HOME/.zshrc
 ```
 
-### GIT
+### git
 
 ```sh
 brew install git
@@ -65,7 +65,7 @@ npm -v
 npm install -g commitizen
 ```
 
-### TMUX
+### tmux
 
 ```sh
 brew install tmux
@@ -74,11 +74,11 @@ tmux -V
 ln -sv $MDE/tmux $HOME/.config/tmux
 ```
 
-### NVIM
+### nvim
 
 ```sh
 # Install neovim to $HOM/apps/nvim/
 # https://github.com/neovim/neovim/blob/master/INSTALL.md
 
-ln -sv $MDE/nvim $HOME/.config/nvim
+ln -sv $MDE/nvim-starter $HOME/.config/nvim
 ```
