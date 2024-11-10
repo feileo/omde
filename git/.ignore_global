@@ -6,8 +6,8 @@
 egglist.txt
 *.project
 *.settings/
+*.vscode/
 *.*path
 *pylint
 .test.*
-.
 pyproject.toml
