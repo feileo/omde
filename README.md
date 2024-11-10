@@ -90,4 +90,5 @@ brew install ripgrep
 ln -sv $MDE/nvim-starter $HOME/.config/nvim
 ope
 # Run :MasonInstallAll command after lazy.nvim finishes downloading plugins.
+# Run :GoInstallDeps for go filetype
 ```
