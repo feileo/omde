@@ -7,3 +7,6 @@
 [submodule "nvim-core"]
 	path = nvim-core
 	url = https://github.com/feileo/nvim-core.git
+[submodule "nvim-ui"]
+	path = nvim-ui
+	url = https://github.com/feileo/nvim-ui.git
