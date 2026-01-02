@@ -1,3 +1,6 @@
 .DS_Store
 *local.zsh
 zsh/local.zsh
+
+# tmux plugins (managed by TPM)
+tmux/plugins/
