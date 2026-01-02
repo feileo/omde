@@ -69,9 +69,18 @@ npm install -g commitizen
 
 ```sh
 brew install tmux
+# or brew upgrade tmux
 tmux -V
 
+brew install ical-buddy
+
 ln -sv $MDE/tmux $HOME/.config/tmux
+
+git clone https://github.com/tmux-plugins/tpm $HOME/.config/tmux/plugins/tpm
+
+tmux new -s main
+
+prefix + I
 ```
 
 ### nvim
