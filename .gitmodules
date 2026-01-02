@@ -1,5 +1,5 @@
-[submodule "tmux"]
-	path = tmux
+[submodule "tmux_old"]
+	path = tmux_old
 	url = https://github.com/feileo/tmux.git
 [submodule "nvim-starter"]
 	path = nvim-starter
