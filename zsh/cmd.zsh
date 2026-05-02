@@ -2,7 +2,9 @@
 # plugins, and themes. Aliases can be placed here, though oh-my-zsh
 # users are encouraged to define aliases within the ZSH_CUSTOM folder.
 # For a full list of active aliases, run `alias`.
+
 alias ope="nvim"
+alias cc="claude"
 
 # zshrc
 alias opezrc='nvim ~/.zshrc'
@@ -97,4 +99,22 @@ rmqq() {
     if [[ -f "$logpath" ]]; then
         rm "$logpath"
     fi
+}
+
+# thrift version switcher
+thrift-use() {
+  local version="$1"
+  local base="/Users/jiawei/x/apps"
+  if [ -z "$version" ]; then
+    echo "Usage: thrift-use <version>  (e.g. thrift-use 0.9.3)"
+    echo "Available: $(ls -d ${base}/thrift-* 2>/dev/null | xargs -I{} basename {} | sed 's/thrift-//')"
+    return 1
+  fi
+  local target="${base}/thrift-${version}"
+  if [ ! -d "$target" ]; then
+    echo "Error: ${target} not found"
+    return 1
+  fi
+  ln -sfn "$target" "${base}/thrift"
+  echo "Switched to thrift ${version}: $(thrift --version)"
 }

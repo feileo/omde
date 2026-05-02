@@ -67,3 +67,6 @@ DEFAULT_USER=$USER
 [[ ! -f $MDE/zsh/cmd.zsh ]] || source $MDE/zsh/cmd.zsh
 
 [[ ! -f $MDE/zsh/local.zsh ]] || source $MDE/zsh/local.zsh
+
+# [TODO]: remove this
+[[ -f $HOME/.bashrc ]] && source $HOME/.bashrc
