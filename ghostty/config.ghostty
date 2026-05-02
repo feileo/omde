@@ -10,7 +10,7 @@ cursor-style-blink = true
 
 font-size = 13
 font-thicken = true
-font-thicken-strength = 230
+font-thicken-strength = 197
 font-feature = calt
 font-family = Maple Mono NF CN
 font-synthetic-style = no-bold

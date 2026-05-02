@@ -10,8 +10,9 @@
   navigate = true
   ; https://github.com/dandavison/delta/blob/main/themes.gitconfig
   syntax-theme = Monokai Extended Light
-  ; dark = true
   light = true
+  ; syntax-theme = Monokai Extended
+  ; dark = true
   side-by-side = true
   line-numbers = true
   hyperlinks = true
