@@ -107,7 +107,7 @@ print_tmux_status() {
 		echo "$NERD_FONT_FREE"
 	fi
 
-	if [[ $epoc_diff -gt $ALERT_POPUP_BEFORE_SECONDS && epoc_diff -lt $ALERT_POPUP_BEFORE_SECONDS+10 ]]; then
+	if [[ $epoc_diff -gt $ALERT_POPUP_BEFORE_SECONDS && $epoc_diff -lt $((ALERT_POPUP_BEFORE_SECONDS + 10)) ]]; then
 		display_popup
 	fi
 }

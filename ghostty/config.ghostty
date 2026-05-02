@@ -1,0 +1,24 @@
+theme = Molokai
+
+background = #1e222a
+background-opacity = 0.97
+
+cursor-style = block
+cursor-text = #ECEEEE
+cursor-opacity = 0.75
+cursor-style-blink = true
+
+font-size = 13
+font-thicken = true
+font-thicken-strength = 230
+font-feature = calt
+font-family = Maple Mono NF CN
+font-synthetic-style = no-bold
+
+macos-icon = holographic
+macos-titlebar-style = native
+
+term = xterm-ghostty
+
+shell-integration = zsh
+shell-integration-features = cursor,sudo,title

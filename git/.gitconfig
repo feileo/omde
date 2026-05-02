@@ -8,12 +8,16 @@
 
 [delta]
   navigate = true
-  light = false
-  side-by-side = false
+  ; https://github.com/dandavison/delta/blob/main/themes.gitconfig
+  syntax-theme = Monokai Extended Light
+  ; dark = true
+  light = true
+  side-by-side = true
   line-numbers = true
+  hyperlinks = true
 
 [merge]
-  # conflictstyle = diff3
+  ; conflictstyle = diff3
   conflictstyle = zdiff3
 
 [diff]
@@ -26,5 +30,5 @@
   required = true
 
 [user]
-  name = feileo
-  email = g@feileo.com
+  name = jovi
+  email = g@jovi.email
