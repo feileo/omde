@@ -104,7 +104,7 @@ rmqq() {
 # thrift version switcher
 thrift-use() {
   local version="$1"
-  local base="/Users/jiawei/x/apps"
+  local base="$HOM/apps"
   if [ -z "$version" ]; then
     echo "Usage: thrift-use <version>  (e.g. thrift-use 0.9.3)"
     echo "Available: $(ls -d ${base}/thrift-* 2>/dev/null | xargs -I{} basename {} | sed 's/thrift-//')"
