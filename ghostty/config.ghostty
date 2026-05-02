@@ -10,10 +10,10 @@ cursor-style-blink = true
 
 font-size = 13
 font-thicken = true
-font-thicken-strength = 197
+font-thicken-strength = 170
 font-feature = calt
 font-family = Maple Mono NF CN
-font-synthetic-style = no-bold
+font-synthetic-style = "no-bold,no-bold-italic"
 
 macos-icon = holographic
 macos-titlebar-style = native
@@ -22,3 +22,5 @@ term = xterm-ghostty
 
 shell-integration = zsh
 shell-integration-features = cursor,sudo,title
+
+link-url = true

@@ -3,7 +3,15 @@ input=$(cat)
 
 MODEL=$(echo "$input" | jq -r '.model.display_name // "Unknown"' | sed 's/ (1M context)/ 1M/; s/ (200K context)/ 200K/; s/ (128K context)/ 128K/; s/ (\([^)]*\) context)/ \1/' | sed 's/\([A-Za-z]\) \([0-9]\)/\1\2/g')
 COST=$(echo "$input" | jq -r '.cost.total_cost_usd // 0')
-PCT=$(echo "$input" | jq -r '.context_window.used_percentage // 0' | cut -d. -f1)
+PCT=$(echo "$input" | jq -r '
+  if .context_window.current_usage != null and .context_window.context_window_size > 0 then
+    ((.context_window.current_usage.input_tokens + .context_window.current_usage.cache_read_input_tokens + .context_window.current_usage.cache_creation_input_tokens) / .context_window.context_window_size * 100) | floor
+  elif .context_window.used_percentage != null then
+    .context_window.used_percentage | floor
+  else
+    0
+  end
+')
 TOTAL_IN=$(echo "$input" | jq -r '.context_window.total_input_tokens // 0')
 TOTAL_OUT=$(echo "$input" | jq -r '.context_window.total_output_tokens // 0')
 DURATION_MS=$(echo "$input" | jq -r '.cost.total_duration_ms // 0')

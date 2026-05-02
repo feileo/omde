@@ -1,6 +1,6 @@
-# TMUX 现代化配置
+# TMUX 配置
 
-> 基于插件的现代化 tmux 配置，优化的快捷键和工作流程
+> 基于插件的现代化 tmux 配置，优化的快捷键和工作流程。
 
 ## ✨ 特性
 
@@ -28,6 +28,7 @@ tmux -V
 git --version
 
 # 3. Nerd Font
+# Recommend：https://github.com/subframe7536/maple-font
 brew install --cask font-jetbrains-mono-nerd-font
 ```
 
@@ -43,11 +44,11 @@ git clone --recurse-submodules https://github.com/feileo/omde.git $HOME/x/omde
 ```
 
 ```bash
-git clone https://github.com/tmux-plugins/tpm $HOME/.config/tmux/plugins/tpm
+ln -sv $HOME/x/omde/tmux $HOME/.config/tmux
 ```
 
 ```bash
-ln -sv $MDE/tmux $HOME/.config/tmux
+git clone https://github.com/tmux-plugins/tpm $HOME/.config/tmux/plugins/tpm
 ```
 
 ```bash
@@ -56,13 +57,16 @@ tmux new -s main
 # 在 tmux 中安装插件
 prefix + I
 # 等待插件安装完成（会显示 "TMUX environment reloaded"）
+
+# Custom Plugin Patch
+cp $HOME/x/omde/tmux/scripts/plugin_uptime_status.sh $HOME/x/omde/tmux/plugins/catppuccin-tmux/status/uptime.sh
 ```
 
 #### Reload
 
 ```bash
-# 在 tmux 中按
-Ctrl+Space r
+# 在 tmux 中
+Ctrl+Space R
 
 # 或命令行
 tmux source-file $HOME/.config/tmux/tmux.conf
@@ -275,7 +279,7 @@ session      →  当前会话名称
 #### Uptime 模块（系统运行时间）
 ```bash
 显示格式: 󰔟 0d 17h 52m
-脚本位置: scripts/uptime.sh
+脚本位置: scripts/text_uptime.sh
 模块位置: plugins/catppuccin-tmux/status/uptime.sh
 ```
 
@@ -285,7 +289,7 @@ session      →  当前会话名称
 显示格式: 
   - 无会议: 󱁕
   - 有会议: 󰤙 14:30 Meeting Name (5 minutes)
-脚本位置: scripts/cal.sh
+脚本位置: scripts/text_meetings.sh
 模块位置: plugins/catppuccin-tmux/status/meetings.sh
 ```
 
