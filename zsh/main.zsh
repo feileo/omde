@@ -31,10 +31,10 @@ plugins=(
 
 ZSH_COMPDUMP="$ZSH_CACHE_DIR/.zcompdump"
 ZSH_DISABLE_COMPFIX=true
-COMPLETION_WAITING_DOTS=true
+# COMPLETION_WAITING_DOTS=true
 COMPLETION_WAITING_DOTS="%F{yellow}waiting...%f"
 CASE_SENSITIVE=true
-HYPHEN_INSENSITIVE=true
+HYPHEN_INSENSITIVE=false
 
 
 zstyle ':omz:update' mode reminder
@@ -53,10 +53,18 @@ source $ZSH/oh-my-zsh.sh
 setopt HIST_IGNORE_DUPS
 
 # install tmux-256color https://gist.github.com/bbqtd/a4ac060d6f6b9ea6fe3aabe735aa9d95
+# if [[ $TMUX != "" ]] then
+#   export TERM="tmux-256color"
+# else
+#   export TERM="xterm-256color"
+# fi
+
+# if [[ -z "$TMUX" ]]; then
+#     export TERM=xterm-ghostty
+# fi
+
 if [[ $TMUX != "" ]] then
   export TERM="tmux-256color"
-else
-  export TERM="xterm-256color"
 fi
 
 DEFAULT_USER=$USER
