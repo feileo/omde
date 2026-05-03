@@ -17,6 +17,7 @@ font-synthetic-style = "no-bold,no-bold-italic"
 
 macos-icon = holographic
 macos-titlebar-style = native
+macos-option-as-alt = true
 
 term = xterm-ghostty
 
