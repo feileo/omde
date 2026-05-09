@@ -101,8 +101,16 @@ display_popup() {
 print_tmux_status() {
 	if [[ $minutes_till_meeting -lt $ALERT_IF_IN_NEXT_MINUTES \
 		&& $minutes_till_meeting -gt -60 ]]; then
-		echo "$NERD_FONT_MEETING \
-			$time $title ($minutes_till_meeting minutes)"
+		# Truncate title to 20 characters
+		truncated_title="${title:0:20}"
+		if [[ ${#title} -gt 20 ]]; then
+			truncated_title="${truncated_title}..."
+		fi
+		if [[ $minutes_till_meeting -gt 0 ]]; then
+			echo "$NERD_FONT_MEETING $time $truncated_title (${minutes_till_meeting}m)"
+		else
+			echo "$NERD_FONT_MEETING $time $truncated_title"
+		fi
 	else
 		echo "$NERD_FONT_FREE"
 	fi
