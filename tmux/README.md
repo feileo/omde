@@ -123,13 +123,13 @@ tmux kill-server     杀掉所有会话
 # 窗口操作
 prefix + c           新建窗口（保留当前路径）
 prefix + w           列出所有窗口（选择切换）
-prefix + f           按名称查找窗口
+# prefix + f         按名称查找窗口
 prefix + &           关闭当前窗口（需确认）
 prefix + ,           重命名当前窗口
 
 # 窗口导航
-prefix + p           上一个窗口 ⭐
-prefix + n           下一个窗口 ⭐
+prefix + H           上一个窗口 ⭐
+prefix + L           下一个窗口 ⭐
 prefix + C-h         上一个窗口（备用）
 prefix + C-l         下一个窗口（备用）
 prefix + Tab         切换到最近使用的窗口
@@ -159,11 +159,11 @@ prefix + l           移动到右边窗格 ⭐
 prefix + ;           切换到上一个活动窗格
 prefix + q           显示窗格编号（然后按数字跳转）
 
-# 窗格调整大小 (Vim风格)
-prefix + H           向左扩展 ⭐
-prefix + J           向下扩展 ⭐
-prefix + K           向上扩展 ⭐
-prefix + L           向右扩展 ⭐
+# 窗格调整大小 (Vim风格，当前配置中已注释，未启用)
+# prefix + H           向左扩展
+# prefix + J           向下扩展
+# prefix + K           向上扩展
+# prefix + L           向右扩展
 prefix + Alt+方向键   调整窗格大小（5个单位）
 
 # 窗格布局
@@ -226,7 +226,7 @@ prefix + -           删除最近的缓冲区
 
 ```bash
 # 配置管理
-prefix + r           重新加载配置 ⭐
+prefix + R           重新加载配置 ⭐
 prefix + :           进入命令提示符
 prefix + ?           列出所有快捷键
 
@@ -301,9 +301,9 @@ session      →  当前会话名称
 
 ```bash
 前缀键:         Ctrl+Space (备用: Ctrl+e)
-历史记录:       5000 行
+历史记录:       50000 行
 重复超时:       600ms
-状态更新间隔:   30 秒
+状态更新间隔:   60 秒
 终端类型:       ${TERM} (动态)
 鼠标支持:       开启
 Vi 模式:        开启
@@ -346,11 +346,11 @@ Ctrl+Space -    # 垂直分割（上下）
 # 4. 在窗格间导航
 Ctrl+Space h/j/k/l
 
-# 5. 调整窗格大小
-Ctrl+Space H/J/K/L
+# 5. 调整窗格大小（H/J/K/L 绑定未启用，用 Alt+方向键）
+Ctrl+Space Alt+方向键
 
 # 6. 在窗口间切换
-Ctrl+Space p/n  # 上一个/下一个
+Ctrl+Space H/L  # 上一个/下一个
 Ctrl+Space 1/2/3  # 直接跳转
 
 # 7. 使用浮动窗口
@@ -392,13 +392,13 @@ Ctrl+Space P（大写 P）
 ### 窗格操作（都用 Vim 风格）
 ```
 导航: h/j/k/l    (小写 = 移动)
-调整: H/J/K/L    (大写 = 调整大小)
+调整: H/J/K/L    (大写 = 调整大小，当前未启用)
 分割: v/-/_      (v=vertical, -=horizontal)
 ```
 
 ### 窗口操作（传统风格）
 ```
-p/n              (previous/next)
+H/L              (previous/next，已覆盖默认 p/n)
 c                (create)
 ,                (重命名，逗号 = comma = change name)
 ```
@@ -589,7 +589,7 @@ fi
 2.  Ctrl+Space v        水平分割
 3.  Ctrl+Space -        垂直分割
 4.  Ctrl+Space h/j/k/l  窗格导航
-5.  Ctrl+Space p/n      窗口切换
+5.  Ctrl+Space H/L      窗口切换
 6.  Ctrl+Space z        最大化窗格
 7.  Ctrl+Space Enter    复制模式
 8.  Ctrl+Space P        粘贴
@@ -605,14 +605,6 @@ tmux attach             重新连接
 tmux ls                 列出会话
 tmux kill-server        杀掉所有会话
 Ctrl+Space ?            查看所有快捷键
-Ctrl+Space r            重新加载配置
+Ctrl+Space R            重新加载配置
 ```
-
----
-
-**配置版本**: v1.0  
-**最后更新**: 2026-01-02  
-**维护**: 个人配置
-
-🎉 享受你的 tmux 配置！
 
