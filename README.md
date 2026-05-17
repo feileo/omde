@@ -54,7 +54,7 @@ prefix + I
 cp $MDE/tmux/scripts/plugin_uptime_status.sh $HOME/.config/tmux/plugins/catppuccin-tmux/status/uptime.sh
 ```
 
-👉 **For more information, please refer to the document: [tmux/README.md](tmux/README.md)**
+👉 **For more information, please refer to the document: [tmux/README.md](tmux/README.md).**
 
 
 ## nvim
@@ -71,7 +71,7 @@ nvim
 # :GoInstallDeps（Go env）
 ```
 
-👉 **For more information, please refer to: [nvim-starter](https://github.com/feileo/nvim-starter)**
+👉 **For more information, please refer to: [nvim-starter](https://github.com/feileo/nvim-starter).**
 
 
 ## git
