@@ -94,7 +94,7 @@ Key files in `nvim-starter/lua/`:
 ```sh
 git clone --recurse-submodules <omde-url> $HOME/x/omde
 git submodule update --init --recursive   # after pulling
-git submodule status                       # check versions
+git submodule status                      # check versions
 ```
 
 Submodules (`nvim-starter`, `nvim-core`, `nvim-ui`, `tmux_old`) all point at `github.com/feileo/*`. When updating a submodule, commit the pointer bump in the parent repo.
