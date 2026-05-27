@@ -10,5 +10,3 @@ egglist.txt
 *.*path
 *pylint
 .test.*
-pyproject.toml
-zdebug/
