@@ -1,12 +1,17 @@
 # .gitignore_global
 
-.DS_Store
 .ropeproject/
 .vscode/
+.claude/
+.ruff_cache
+__pycache__/
 egglist.txt
+.DS_Store
+.test.*
 *.project
 *.settings/
 *.vscode/
 *.*path
 *pylint
-.test.*
+*.pyc
+*.egg-info

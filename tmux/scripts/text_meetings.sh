@@ -80,6 +80,10 @@ calculate_times(){
 }
 
 display_popup() {
+	local lock_file="/tmp/tmux_meeting_popup_$(date +%Y%m%d)_${time//:/}_${title// /_}"
+	[[ -f "$lock_file" ]] && return
+	touch "$lock_file"
+
 	tmux display-popup \
 		-S "fg=#eba0ac" \
 		-w50% \
